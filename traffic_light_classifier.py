@@ -229,4 +229,29 @@ print('Accuracy: {}'.format(str(accuracy)))
 print("Number of misclassified images = {} out of {}.".format(str(len(MISCLASSIFIED)), str(total)))
 
 
+## Test never classify any red lights as green
+#tests = test_functions.Tests()
+#if(len(MISCLASSIFIED) > 0):
+#    tests.test_red_as_green(MISCLASSIFIED)
+#else:
+#    print("MISCLASSIFIED may not have been populated with images.")
+
+
+
+## After this line of codes are for improve algorithm.
+## See what lead the misclassify.
+def print_misclassified_image(MISCLASSIFIED, idx):
+    img, pred_label, true_label = MISCLASSIFIED[idx]
+    plt.imshow(img)
+    print("No{} => You predected {}, but the true label is {}.".format(idx, pred_label, true_label))
+
+
+def print_misclassified_probabilities(misclassified_list):
+    for idx, (img, pred_label, true_label) in enumerate(misclassified_list):
+        _, pr, py, pg = estimate_label(img, convert_to_hsv(img))
+        print("No{} => You predected {}, but the true label is {}.".format(idx, pred_label, true_label))
+        print("Probabilities: red=> {} / yellow=> {} / green=> {}\n".format(pr, py, pg))
+    
+#print_misclassified_probabilities(MISCLASSIFIED)
+
 

@@ -35,3 +35,18 @@ class Tests(unittest.TestCase):
         print_pass()
 
 
+    def test_red_as_green(self, misclassified_images):
+        
+        for im, predicted_label, true_label in misclassified_images:
+            if(true_label == [1,0,0]):
+                try:
+                    self.assertNotEqual(predicted_label, [0, 0, 1])
+                except self.failureException as e:
+                    print_fail()
+                    print("Warning: A red light is classified as green.")
+                    print('\n'+str(e))
+                    return
+        
+        print_pass()
+
+

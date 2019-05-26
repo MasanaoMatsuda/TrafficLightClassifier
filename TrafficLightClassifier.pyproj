@@ -1,0 +1,100 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>64c8f551-2b28-4f24-884f-6e7b98ce4b1e</ProjectGuid>
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>traffic_light_classifier.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>TrafficLightClassifier</Name>
+    <RootNamespace>TrafficLightClassifier</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="helpers.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_functions.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="traffic_light_classifier.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="traffic_light_images\" />
+    <Folder Include="traffic_light_images\test\" />
+    <Folder Include="traffic_light_images\test\green\" />
+    <Folder Include="traffic_light_images\test\red\" />
+    <Folder Include="traffic_light_images\test\yellow\" />
+    <Folder Include="traffic_light_images\training\" />
+    <Folder Include="traffic_light_images\training\green\" />
+    <Folder Include="traffic_light_images\training\red\" />
+    <Folder Include="traffic_light_images\training\yellow\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="traffic_light_images\test\green\00febbe1-a9ae-4b5f-b682-8ebfdae485a3.jpg" />
+    <Content Include="traffic_light_images\test\green\01ae3c3d-21c8-4711-853a-ba6fda9553bf.jpg" />
+    <Content Include="traffic_light_images\test\green\06ab17cd-888e-45de-9482-b432e23cea6a.jpg" />
+    <Content Include="traffic_light_images\test\green\0a251f2f-babd-4257-87be-2940bd4bacc8.jpg" />
+    <Content Include="traffic_light_images\test\green\0ab8c5a1-a750-4137-ad0a-13e5da55bd09.jpg" />
+    <Content Include="traffic_light_images\test\green\0acf7bce-03d1-46af-aac2-bbca22e1c1cb.jpg" />
+    <Content Include="traffic_light_images\test\green\0ae63733-c453-42b2-89cf-e4a7877feda6.jpg" />
+    <Content Include="traffic_light_images\test\green\0aec12bd-ce95-4400-937b-ece1fd7c3011.jpg" />
+    <Content Include="traffic_light_images\test\green\0b2b43f5-cad6-41a3-80ab-baf02e9f7ff1.jpg" />
+    <Content Include="traffic_light_images\test\green\0b3606b7-bf9e-49d8-8de8-801bb8374b2d.jpg" />
+    <Content Include="traffic_light_images\test\green\0b534a19-781b-4883-8005-4dce2478e772.jpg" />
+    <Content Include="traffic_light_images\test\red\01d76b8c-dc66-47b6-83d4-b00826dfec18.jpg" />
+    <Content Include="traffic_light_images\test\red\02ebf5b7-739f-4a80-a719-e0c465a5d390.jpg" />
+    <Content Include="traffic_light_images\test\red\02ed0cac-f1e9-4ed2-a04a-60abe027740f.jpg" />
+    <Content Include="traffic_light_images\test\red\03ac3e22-47a8-4e0e-9ac8-64a96c34d30d.jpg" />
+    <Content Include="traffic_light_images\test\red\03df7425-fa62-48f7-9ae8-701c6fa849cf.jpg" />
+    <Content Include="traffic_light_images\test\red\06cda0c4-bb90-4378-847f-50087095fce5.jpg" />
+    <Content Include="traffic_light_images\test\red\07bfdf08-8e84-482f-b1a3-2e915447d248.jpg" />
+    <Content Include="traffic_light_images\test\red\07ce50ef-02f1-4b74-98ba-7839aaee8664.jpg" />
+    <Content Include="traffic_light_images\test\red\0ba83f83-a49c-4319-8ee2-547082ef7503.jpg" />
+    <Content Include="traffic_light_images\test\red\0bc2c699-227a-4ac8-a7f4-8944c210d885.jpg" />
+    <Content Include="traffic_light_images\test\yellow\0cb705ab-5c6d-41f1-ad9b-c0a99812cf15.jpg" />
+    <Content Include="traffic_light_images\test\yellow\2f2fcecc-d118-454b-96e0-4018f584bf0a.jpg" />
+    <Content Include="traffic_light_images\test\yellow\3a05a35f-31cd-4ea6-81b7-bafb30f83824.jpg" />
+    <Content Include="traffic_light_images\test\yellow\3b575eb3-8904-409e-bab1-672863cafdfd.jpg" />
+    <Content Include="traffic_light_images\test\yellow\3b9d130d-3725-440d-867a-7e8a04603a97.jpg" />
+    <Content Include="traffic_light_images\test\yellow\4ba8fe29-6d69-4c32-be18-eb3ec73cb3de.jpg" />
+    <Content Include="traffic_light_images\test\yellow\5af79a62-defd-4593-b058-4cdc2f4176aa.jpg" />
+    <Content Include="traffic_light_images\test\yellow\5d309b84-aef3-4098-a14d-5cb05f5821c9.jpg" />
+    <Content Include="traffic_light_images\test\yellow\6cfdbbbc-b63b-4dcf-bd16-57e06fdf51a9.jpg" />
+    <Content Include="traffic_light_images\training\green\00910eaa-bfb5-42d1-acf0-2cb87b877f8d.jpg" />
+    <Content Include="traffic_light_images\training\green\0223f090-357c-4230-97aa-b238eae4b37a.jpg" />
+    <Content Include="traffic_light_images\training\green\02911acb-1e9f-4dca-a5fa-22aec97e04aa.jpg" />
+    <Content Include="traffic_light_images\training\green\0307f51b-ac7e-4563-b4e6-06c519c23b36.jpg" />
+    <Content Include="traffic_light_images\training\green\0444500b-c47b-442f-831e-ba606b1ff1cf.jpg" />
+    <Content Include="traffic_light_images\training\red\0023f366-a173-4ba7-952c-63f5698c022d.jpg" />
+    <Content Include="traffic_light_images\training\red\00601e2b-af06-4b91-a50b-d94385371b01.jpg" />
+    <Content Include="traffic_light_images\training\red\0166f90e-c685-4f0b-98ed-0c3fd338ff01.jpg" />
+    <Content Include="traffic_light_images\training\red\022ae068-6f6e-4563-97c1-f96261b436e6.jpg" />
+    <Content Include="traffic_light_images\training\red\0230d0a6-0eac-4bf1-bc0c-560f18ad7415.jpg" />
+    <Content Include="traffic_light_images\training\yellow\0717438a-6b46-46fc-9d18-c9061349b486.jpg" />
+    <Content Include="traffic_light_images\training\yellow\078e1621-e335-47d6-b352-db864529a63e.jpg" />
+    <Content Include="traffic_light_images\training\yellow\219615dd-a92f-4e88-adc4-8b2386b275a1.jpg" />
+    <Content Include="traffic_light_images\training\yellow\23f90cd6-55f9-4bd8-a116-9e3a066f5aaf.jpg" />
+    <Content Include="traffic_light_images\training\yellow\28b9123d-ac0e-4cb4-b302-9f4673687ddc.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
